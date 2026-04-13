@@ -1,3 +1,14 @@
+## 📂 Project Structure
+```text
+.
+├── 01_bronze/          # Raw data ingestion notebooks
+├── 02_silver/          # Data cleaning & schema enforcement
+├── 03_gold/            # Business logic & career statistics
+├── source_data/        # Sample F1 JSON files (Drivers & Results)
+└── README.md           # Project documentation & Architecture
+
+
+
 # drivers-results-backend
 # Formula 1 Data Engineering Pipeline
 A production-grade Medallion Architecture built on **Azure Databricks** and **Unity Catalog**.
@@ -16,11 +27,13 @@ This project implements a three-tier lakehouse architecture to process historica
 - **Storage**: Azure Data Lake Storage Gen2 (Delta Lake format)
 - **CI/CD**: Databricks Repos + GitHub
 
+
 ## 📊 Data Quality Checks
 The pipeline includes automated DQ gates to monitor:
 - Null counts for critical columns (DOB, Position).
 - Schema validation.
 - Ingestion timestamps for lineage.
+
 
 ## 🚀 How to Run
 1. Configure Azure Storage Credentials in Unity Catalog.
